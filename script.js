@@ -56,7 +56,7 @@ const getPlayListItems = async playlistID => {
 };
 
 //Get Title video and videoId
-getPlayListItems("PLLaX0JM_mw3IVLjZ80II9VyXPBfJsbdia
+getPlayListItems("PLLaX0JM_mw3IVLjZ80II9VyXPBfJsbdia")
 .then(data => {
 	data.forEach(item => {
     	item.items.forEach(i => listVid.push({title: i.snippet.title, idVid: i.snippet.resourceId.videoId}));
