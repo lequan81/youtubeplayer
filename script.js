@@ -1,4 +1,3 @@
-
 const apiKeyList = ["AIzaSyArSyw111GhQ_uZqe5d3pR0NgKQOhVlecE"];
 var apiKey = apiKeyList[0];
 var listVid = [];
@@ -57,7 +56,7 @@ const getPlayListItems = async playlistID => {
 };
 
 //Get Title video and videoId
-getPlayListItems("PLLaX0JM_mw3IVLjZ80II9VyXPBfJsbdia")
+getPlayListItems("TLGGHqn8t3GgoyEyODA2MjAyMA")
 .then(data => {
 	data.forEach(item => {
     	item.items.forEach(i => listVid.push({title: i.snippet.title, idVid: i.snippet.resourceId.videoId}));
@@ -77,7 +76,7 @@ getPlayListItems("PLLaX0JM_mw3IVLjZ80II9VyXPBfJsbdia")
 function changeAPIKey(newKey, err) {
 	if (err.response.data.error.errors[0].reason == "dailyLimitExceeded") {
 		apiKey = newKey;
-		getPlayListItems("PLLaX0JM_mw3IVLjZ80II9VyXPBfJsbdia")
+		getPlayListItems("TLGGHqn8t3GgoyEyODA2MjAyMA")
 		.then(data => {
 			data.forEach(item => {
 	    	item.items.forEach(i => listVid.push({title: i.snippet.title, idVid: i.snippet.resourceId.videoId}));
