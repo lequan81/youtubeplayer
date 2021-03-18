@@ -136,7 +136,6 @@ button {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	opacity: 0.95;
-	animation:scroll 10s linear infinite;
 }
 @keyframes scroll{
 0% {left:800px;}
